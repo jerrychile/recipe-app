@@ -1,0 +1,19 @@
+extends base 
+
+block content
+    .jumbotron
+        h1.display-4= recipe.recipeName
+
+        ul.list-group
+            each ingredient in recipe.ingredients
+                li.list-group-item= ingredient
+
+        p.lead.mt-3= recipe.instructions
+        hr.my-4
+        p Recipe Created By #{recipe.userName}
+        p#welcome(hidden)= recipe._id
+
+        p.lead
+            a.btn.btn-outline-primary.btn-lg.ml-2(href='http://127.0.0.1:8000/api/v1/view/myrecipes' role='button') Back
+            a.deleteRecipe.btn.btn-outline-danger.mr-auto.btn-lg.ml-2(href='http://127.0.0.1:8000/api/v1/view/myrecipes' role='button') Delete Recipe
+        

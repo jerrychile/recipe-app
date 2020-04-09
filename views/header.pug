@@ -1,0 +1,25 @@
+block content
+
+
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+        a.navbar-brand(href='#') Ash and Jerry
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+                li.nav-item
+                    a.nav-link(href='http://127.0.0.1:8000/api/v1/view/getallrecipes')
+                        | Home 
+                        span.sr-only (current)
+                li.nav-item
+                     a.nav-link(href='http://127.0.0.1:8000/api/v1/view/myrecipes') My Recipes
+                li.nav-item
+                    a.nav-link(href='http://127.0.0.1:8000/api/v1/view/createrecipe') Add Recipes
+            form.form-inline.my-2.my-lg-0
+                button.logout.btn.btn-outline-success.my-2.my-sm-0(type='button') Logout
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+script(src='/js/logout.js')
+
+              
+                

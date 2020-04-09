@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+      meta(charset='UTF-8')
+      title Recipe Book 
+      link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+    body
+
+
+        block content
+            include header
+            .container.mt-3
+                .row
+                    each recipe in recipes
+                        .col-md-4
+                            .card.mb-4.text-white.bg-dark
+                                .card-body
+                                    h5.card-title= recipe.recipeName
+                                   
+                                    a.btn.btn-outline-light.btn-sm(href=`http://127.0.0.1:8000/api/v1/view/recipe/${recipe._id}`) View Recipe

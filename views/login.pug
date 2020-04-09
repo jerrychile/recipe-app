@@ -1,0 +1,15 @@
+extends base
+block content
+    .container
+        form.form1
+            .form-group
+                label(for='Email') Email address
+                input#Email.form-control(type='email' placeholder='Enter email')
+            .form-group
+                label(for='Password') Password
+                input#Password.form-control(type='password' placeholder='Password')
+
+            button.btn.btn-primary(type='submit' href='http://127.0.0.1:8000/api/v1/view/getallrecipes') Submit
+
+            p.lead New user? 
+                a.btn.btn-link.btn-lg(href='http://127.0.0.1:8000/api/v1/view/register' role='button') Register!

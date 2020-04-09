@@ -1,0 +1,19 @@
+extends base
+block content
+    include header
+    .container.mt-5
+        form.form
+            .form-group
+                label(for='recipename') Recipe Name
+                input#recipename.form-control(type='text'  placeholder='Enter recipe name')
+            .form-group
+                label(for='ingredients') Ingredients
+                input#ingredients.form-control(type='text' placeholder='Add ingredients')
+                label(for='ingredients') Use a ',' to seperate ingredients
+            .form-group
+                label(for='instructions') Instructions
+                input#instructions.form-control(type='text' placeholder='Add instructions')
+
+            button.btn.btn-primary(type='submit') Submit
+
+
